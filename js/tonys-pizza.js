@@ -11,11 +11,11 @@ let isAvailable = true;               - can change based on inventory
 
 // Strings - text values
 
-let pizzaName = "Sicilian";
-console.log(pizzaName);
+// let pizzaName = "Sicilian";
+// console.log(pizzaName);
 
-const shopName = "Tony's Pizza Shop";
-console.log(shopName);
+// const shopName = "Tony's Pizza Shop";
+// console.log(shopName);
 
 // shopName = "Mario's Pizza";
 // console.log(shopName);
@@ -74,3 +74,34 @@ console.log(0.1 + 0.2); // Returned 0.30000000000000004.
 
 console.log(18 == "18");
 console.log(18 === "18");
+
+
+// TOPIC - CONTROL FLOW AND ERROR HANDLING
+
+// Global Scope
+
+const shopName = "Tony's Pizza Shop"; // Can be seen anywhere.
+
+{
+
+    // Block Scope
+
+    let pizzaName = "Sicilian";
+    const pizzaPrice = 18.99;
+    console.log(shopName); // Can be seen inside the block because it is a global scope.
+    console.log(pizzaName); // Can only be seen only here in the block scope.
+
+}
+
+console.log(shopName) // Can still be seen becuase it is a global scope.
+// console.log(pizzaName) // Can't be seen because it is a block scope.
+
+// Var Variable Issues Of Ignoring Scope
+
+{
+  var oldWay = "I ignore block scope";
+  let newWay = "I respect block scope";
+}
+
+console.log(oldWay);  // what happens?
+// console.log(newWay);  // what happens?
