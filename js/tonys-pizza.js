@@ -103,5 +103,149 @@ console.log(shopName) // Can still be seen becuase it is a global scope.
   let newWay = "I respect block scope";
 }
 
-console.log(oldWay);  // what happens?
-// console.log(newWay);  // what happens?
+console.log(oldWay);
+// console.log(newWay);
+
+// Conditional Statements
+
+// Exercise 1
+
+/*
+
+const orderTotal = 45;
+
+if (orderTotal >= 50) {
+
+  console.log("Order qualifies for free delivery!");
+
+} else if (orderTotal >= 30) {
+
+  console.log("Order qualifies for a free drink!");
+
+} else {
+
+  console.log("Add more items to qualify for a reward.");
+
+}
+
+*/
+
+/* Exercise 2 Multiple conditions
+Tony wants to apply discounts based on both order total AND whether
+the customer is a loyalty member.
+
+
+const orderTotal = 55
+const isLoyaltyMember = true;
+
+if (orderTotal >= 50 && isLoyaltyMember) {
+
+  console.log("20% loyalty discount applied!");
+
+} else if (orderTotal >= 50 && !isLoyaltyMember) {
+
+  console.log("Free delivery applied!");
+
+} else if (orderTotal < 50 && isLoyaltyMember) {
+
+  console.log("10% loyalty discount applied!");
+
+} else {
+
+  console.log("No discount available.");
+
+}
+
+
+// Testing The Not Operator
+
+const hasPromoCode = false;
+
+console.log(isLoyaltyMember && hasPromoCode);
+console.log(isLoyaltyMember || hasPromoCode);
+console.log(!isLoyaltyMember);
+
+*/
+
+/* Exercise 3
+Tony wants to give free garlic knots to: Any order over $40 OR
+Any loyalty member regardless of order total
+
+
+const orderTotal = 45;
+const isLoyaltyMember = false;
+
+if (orderTotal > 40 || isLoyaltyMember) {
+
+  console.log("Free garlic bread added to your order!");
+ 
+} else {
+
+  console.log("No free garlic bread today.");
+
+}
+
+*/
+
+/* Exercise 4
+Tony wants to give every even numbered order a free soda:
+
+
+const orderNumber = 7;
+
+if (orderNumber % 2 === 0) {
+
+  console.log("Free soda added to order #" + orderNumber);
+
+} else {
+
+  console.log("No free soda for order #" + orderNumber);
+
+}
+*/
+
+/* Exercise 5
+Tony wants a more complex promotion. Every even order over $30 gets a free soda
+Every odd order over $50 gets a free soda. Everything else gets nothing.
+*/
+
+// const orderNumber = 6;
+// const orderTotal = 25;
+
+// if (orderNumber % 2 === 0 && orderTotal > 30) {
+
+//   console.log("Free sda for even order #" + orderNumber);
+  
+// } else if (orderNumber % 2 !== 0 && orderTotal > 50){
+
+//   console.log("Free soda for odd order #" + orderNumber);
+  
+// } else {
+
+//   console.log("No free soda for order #" + orderNumber);
+
+// }
+
+/* Exercise 6
+Tony wants to check if a pizza is available for delivery:
+
+
+const pizzaAvailable = true;
+const deliveryZoneActive = true;
+
+if (pizzaAvailable && deliveryZoneActive) {
+
+  console.log("Order confirmed!");
+  
+  } else if (pizzaAvailable && !deliveryZoneActive) {
+
+  console.log("Pickup only available.");
+  
+} else {
+
+  console.log("Sorry, out of stock.");
+
+}
+
+// Returns Order confirmed!
+*/
