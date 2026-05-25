@@ -22,88 +22,88 @@ let isAvailable = true;               - can change based on inventory
 
 // Numbers
 
-let pizzaPrice = 18.99;
-console.log(pizzaPrice);
+// let pizzaPrice = 18.99;
+// console.log(pizzaPrice);
 
-pizzaPrice = 21.99;
-console.log(pizzaPrice);
+// pizzaPrice = 21.99;
+// console.log(pizzaPrice);
 
-// Boolean
+// // Boolean
 
-let isAvailable = true;
-console.log(isAvailable);
+// let isAvailable = true;
+// console.log(isAvailable);
 
-// Null - intentionally empty
+// // Null - intentionally empty
 
-let currentOrder = null;
-console.log(currentOrder);
+// let currentOrder = null;
+// console.log(currentOrder);
 
-// Undefined - declared but not assigned
+// // Undefined - declared but not assigned
 
-let deliveryDriver;
-console.log(deliveryDriver);
-
-
-// TOPIC - OPERATORS
-
-let price = 18.99;
-let discount = 5;
-
-console.log(price + discount);
-console.log(price - discount);
-console.log(price * 2);
-console.log(price / 2);
-console.log(price % 2);
-
-// Modulus
-
-console.log(10 % 2); // Even, no remainder
-console.log(11 % 2); // Odd, has a remainder
-
-// Comparison Operators
-
-console.log(pizzaPrice > 15);
-console.log(pizzaPrice < 15);
-console.log(pizzaPrice >= 18.99);
-console.log(pizzaPrice === 18.99); // Came out false.
-console.log(pizzaPrice !== 20);
-
-console.log(18.99 === 18.99);  // Came out true here.
-console.log(0.1 + 0.2 === 0.3); // Came out false.
-console.log(0.1 + 0.2); // Returned 0.30000000000000004.
-
-console.log(18 == "18");
-console.log(18 === "18");
+// let deliveryDriver;
+// console.log(deliveryDriver);
 
 
-// TOPIC - CONTROL FLOW AND ERROR HANDLING
+// // TOPIC - OPERATORS
 
-// Global Scope
+// let price = 18.99;
+// let discount = 5;
 
-const shopName = "Tony's Pizza Shop"; // Can be seen anywhere.
+// console.log(price + discount);
+// console.log(price - discount);
+// console.log(price * 2);
+// console.log(price / 2);
+// console.log(price % 2);
 
-{
+// // Modulus
 
-    // Block Scope
+// console.log(10 % 2); // Even, no remainder
+// console.log(11 % 2); // Odd, has a remainder
 
-    let pizzaName = "Sicilian";
-    const pizzaPrice = 18.99;
-    console.log(shopName); // Can be seen inside the block because it is a global scope.
-    console.log(pizzaName); // Can only be seen only here in the block scope.
+// // Comparison Operators
 
-}
+// console.log(pizzaPrice > 15);
+// console.log(pizzaPrice < 15);
+// console.log(pizzaPrice >= 18.99);
+// console.log(pizzaPrice === 18.99); // Came out false.
+// console.log(pizzaPrice !== 20);
 
-console.log(shopName) // Can still be seen becuase it is a global scope.
-// console.log(pizzaName) // Can't be seen because it is a block scope.
+// console.log(18.99 === 18.99);  // Came out true here.
+// console.log(0.1 + 0.2 === 0.3); // Came out false.
+// console.log(0.1 + 0.2); // Returned 0.30000000000000004.
 
-// Var Variable Issues Of Ignoring Scope
+// console.log(18 == "18");
+// console.log(18 === "18");
 
-{
-  var oldWay = "I ignore block scope";
-  let newWay = "I respect block scope";
-}
 
-console.log(oldWay);
+// // TOPIC - CONTROL FLOW AND ERROR HANDLING
+
+// // Global Scope
+
+// const shopName = "Tony's Pizza Shop"; // Can be seen anywhere.
+
+// {
+
+//     // Block Scope
+
+//     let pizzaName = "Sicilian";
+//     const pizzaPrice = 18.99;
+//     console.log(shopName); // Can be seen inside the block because it is a global scope.
+//     console.log(pizzaName); // Can only be seen only here in the block scope.
+
+// }
+
+// console.log(shopName) // Can still be seen becuase it is a global scope.
+// // console.log(pizzaName) // Can't be seen because it is a block scope.
+
+// // Var Variable Issues Of Ignoring Scope
+
+// {
+//   var oldWay = "I ignore block scope";
+//   let newWay = "I respect block scope";
+// }
+
+// console.log(oldWay);
 // console.log(newWay);
 
 // Conditional Statements
@@ -249,3 +249,179 @@ if (pizzaAvailable && deliveryZoneActive) {
 
 // Returns Order confirmed!
 */
+
+// Try...Catch Error Handling
+
+// Exercise 1
+
+/*
+try {
+
+  const orderTotal = 45
+  console.log("Processing order for $" + orderTotal);
+  console.log(customerName);
+
+} catch (error) {
+
+  console.log("Something went wrong: " + error.message);
+  console.log(error.name);
+
+}
+*/
+
+// Exercise 2
+
+/*
+const pizzaPrice = 18;
+const numberOfSlices = 0;
+
+  try {
+
+  if (numberOfSlices === 0) {
+
+  throw new Error("Cannot divide by zero slices!");
+
+  }
+
+  const pricePerSlice = pizzaPrice / numberOfSlices;
+  console.log("Price per slice: $" + pricePerSlice);
+  
+} catch (error) {
+
+  console.log("Order error: " + error.message);
+  
+}
+*/
+
+// Exercise 3 - try...catch with user input validation
+// Tony's order system needs to validate that a customer's name is actually provided before processing.
+
+
+/*
+const customerName = "Sam Smith"
+
+try {
+  
+  if (customerName === "") {
+
+    throw new Error("Customer name is required.");
+
+  } else {
+
+    console.log("Order received for: " + customerName);
+
+  }
+
+ } catch (error) {
+
+  console.log("Validation error: " + error.message);
+  
+}
+*/
+
+// Exercise 4 - try...catch with multiple validations
+
+/*Tony's system needs to validate an entire order before processing it.
+This time you're validating multiple fields and throwing specific errors for each failure.
+Check to see if customerName and pizzaName are empty, and if orderTotal is greater than 0.
+There is a customerName, no pizzaName, and the orderTotal is 25. So pizzaName should fail,
+all validations passing should be set up, the error needs to be caught and logged.
+*/
+
+/*
+const customerName = "Sam Smith";
+const pizzaName = "";
+const orderTotal = 25;
+
+try {
+  
+  if (customerName === "") {
+
+    throw new Error("Customer name is required.");
+    
+  } else if (pizzaName === "") {
+
+    throw new Error("Pizza name is required");
+    
+  } else if (orderTotal === 0) {
+
+    throw new Error("Please correct the order total.");
+
+  } else {
+
+    console.log("Order confirmed for " + customerName + ": " + pizzaName + " $" + orderTotal)
+
+  }
+
+} catch (error) {
+
+  console.log("Order failed: " + error.message);
+  
+}
+  */
+
+// Testing with no customer name
+
+/*
+const customerName = "";
+const pizzaName = "";
+const orderTotal = 25;
+
+try {
+  
+  if (customerName === "") {
+
+    throw new Error("Customer name is required.");
+    
+  } else if (pizzaName === "") {
+
+    throw new Error("Pizza name is required");
+    
+  } else if (orderTotal === 0) {
+
+    throw new Error("Please correct the order total.");
+
+  } else {
+
+    console.log("Order confirmed for " + customerName + ": " + pizzaName + " $" + orderTotal)
+
+  }
+
+} catch (error) {
+
+  console.log("Order failed: " + error.message);
+  
+}
+  */
+
+// Testing for all 3 blocks being true
+
+const customerName = "Sam Smith";
+const pizzaName = "Sicilian";
+const orderTotal = 25;
+
+try {
+  
+  if (customerName === "") {
+
+    throw new Error("Customer name is required.");
+    
+  } else if (pizzaName === "") {
+
+    throw new Error("Pizza name is required");
+    
+  } else if (orderTotal === 0) {
+
+    throw new Error("Please correct the order total.");
+
+  } else {
+
+    console.log("Order confirmed for " + customerName + ": " + pizzaName + " $" + orderTotal)
+
+  }
+
+} catch (error) {
+
+  console.log("Order failed: " + error.message);
+  
+}
