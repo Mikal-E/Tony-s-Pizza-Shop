@@ -396,6 +396,7 @@ try {
 
 // Testing for all 3 blocks being true
 
+/*
 const customerName = "Sam Smith";
 const pizzaName = "Sicilian";
 const orderTotal = 25;
@@ -425,3 +426,102 @@ try {
   console.log("Order failed: " + error.message);
   
 }
+*/
+
+// TOPIC LOOPS & ITERATION
+
+// For Loops
+// Exercise 1 - Tony has 10 orders to process.
+
+/*
+for (let i = 1; i <= 10; i++) {
+
+  if (i % 2 === 0) {
+
+    console.log("Order #" + i + " gets a free soda!");
+
+  } else {
+
+    console.log("Order #" + i + " - no free soda.");
+
+  }
+
+}
+*/
+
+// Exercise 2
+
+/*
+let totalRevenue = 0
+
+for (let i = 1; i <= 5; i++) {
+
+  let orderPrice = i * 10;
+  totalRevenue = totalRevenue + orderPrice;
+  console.log("Order #" + i + "; $" + orderPrice);
+
+}
+
+console.log("Total revenue: $" + totalRevenue);
+*/
+
+
+/* Exercise 3 - Modulus inside a loop
+
+Tony wants to:
+
+Process 10 orders
+Give every 3rd order a 10% discount
+Log each order with or without the discount
+
+Use orderTotal = 20 as the base price for every order.
+
+10 orders need processing, so a loop to 10
+every 3rd order needs to be found so % 3 === 0 would find orders divisible by 3
+*/
+
+/*
+let orderTotal = 20
+
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 3 === 0) {
+
+      orderTotal = orderTotal - (orderTotal * .10);
+      console.log("Order #" + i + ": Your total is " + orderTotal);
+      
+    } else if (i % 3 != 0){
+
+      orderTotal = 20
+      console.log("Order #" + i + ": Your total is " + orderTotal);
+
+    }
+
+    
+}
+
+
+let orderTotal = 20
+
+for (let i = 1; i <= 10; i++) {
+
+    if (i % 3 === 0) {
+
+      const orderTotalDiscount = orderTotal - (orderTotal * .10);
+      console.log("Order #" + i + ": Your total is " + orderTotalDiscount);
+      
+    } else {
+
+      console.log("Order #" + i + ": Your total is " + orderTotal);
+
+    }
+
+    
+}
+*/
+
+
+// While Loops
+
+
