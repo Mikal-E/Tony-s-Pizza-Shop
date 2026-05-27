@@ -553,3 +553,44 @@ The code directly above the heading comment is where I left of in JavaScript
 */
 
 
+// TOPIC - THE DOCUMENT OBJECT MODEL
+
+/* Selecting elements
+const shopTitle = document.querySelector("#shop-title");
+shopTitle.textContent = "Tony's Famous Pizza Shop";
+*/
+
+// Selecting Multiple Elements
+
+const pizzaItems = document.querySelectorAll(".pizza-item");
+// console.log(pizzaItems);
+
+pizzaItems.forEach(function(item, index) {
+
+  item.textContent = "Pizza #" + (index + 1) + " - Coming Soon!";
+
+  }
+
+)
+
+// const shopTitle = document.querySelector("#shop-title");
+
+// // shopTitle.style.color = "red";
+// // shopTitle.style.fontSize = "48px";
+
+const shopTitle = document.querySelector("#shop-title");
+shopTitle.classList.add("featured");
+shopTitle.classList.remove("featured");
+shopTitle.classList.toggle("featured");
+shopTitle.classList.toggle("featured");
+shopTitle.classList.toggle("featured");
+
+console.log(shopTitle.classList.contains("featured"));
+
+// Manipulating Attributes
+
+const pizzaImg = document.querySelector("#pizza-img");
+
+console.log(pizzaImg.getAttribute("alt"));
+pizzaImg.setAttribute("alt", "Tony's Famous Cheese Pizza");
+console.log(pizzaImg.getAttribute("alt"));
