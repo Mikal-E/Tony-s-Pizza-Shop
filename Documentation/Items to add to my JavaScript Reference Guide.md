@@ -13,5 +13,12 @@ Method							Action
 getAttribute("alt")					Reads the attribute value
 setAttribute("alt", "new value")		Changes the attribute value
 removeAttribute("alt")				Removes the attribute entirely
+
+* <li data-price="12">   <!-- stores price data on the element -->
+<li data-category="vegetarian">   <!-- you could store anything -->
+<li data-id="001">   <!-- common for database IDs -->
+
+data-price is called a data attribute — a special HTML feature that lets you store custom data directly on an element. The naming convention is always data- followed by your chosen name. It's not just for JavaScript to select — it's for storing extra information on an element that doesn't affect how it looks but JavaScript can read it. You'll use data attributes constantly in real projects.
+
 * 
 

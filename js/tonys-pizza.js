@@ -562,16 +562,16 @@ shopTitle.textContent = "Tony's Famous Pizza Shop";
 
 // Selecting Multiple Elements
 
-const pizzaItems = document.querySelectorAll(".pizza-item");
-// console.log(pizzaItems);
+// const pizzaItems = document.querySelectorAll(".pizza-item");
+// // console.log(pizzaItems);
 
-pizzaItems.forEach(function(item, index) {
+// pizzaItems.forEach(function(item, index) {
 
-  item.textContent = "Pizza #" + (index + 1) + " - Coming Soon!";
+//   item.textContent = "Pizza #" + (index + 1) + " - Coming Soon!";
 
-  }
+//   }
 
-)
+// )
 
 // const shopTitle = document.querySelector("#shop-title");
 
@@ -589,8 +589,62 @@ console.log(shopTitle.classList.contains("featured"));
 
 // Manipulating Attributes
 
-const pizzaImg = document.querySelector("#pizza-img");
+// const pizzaImg = document.querySelector("#pizza-img");
 
-console.log(pizzaImg.getAttribute("alt"));
-pizzaImg.setAttribute("alt", "Tony's Famous Cheese Pizza");
-console.log(pizzaImg.getAttribute("alt"));
+// console.log(pizzaImg.getAttribute("alt"));
+// pizzaImg.setAttribute("alt", "Tony's Famous Cheese Pizza");
+// console.log(pizzaImg.getAttribute("alt"));
+
+// Iterating Over a Collection
+// Tony wants to highlight any pizza over $15 on the menu.
+
+const pizzaItems = document.querySelectorAll(".pizza-item");
+
+pizzaItems.forEach(function(item) {
+
+  const price = parseInt(item.getAttribute("data-price"));
+
+  if (price > 15) {
+
+    item.style.color = "red";
+
+    }
+
+  }
+
+);
+
+/* ^^^^^^^^^^^^^^ Start of the DOM exercises to here - What you just built is real DOM manipulation:
+
+Selected multiple elements ✅
+Read custom data attributes ✅
+Converted data types ✅
+Applied conditional styling ✅
+
+That's four concepts working together in one small block of code. In a real menu app, this is exactly
+how you'd highlight featured items, sold-out items, or promotional pricing.
+*/
+
+// Document Fragments and HTML Templates
+
+// Building a menu dynamically:
+
+const menu = document.querySelector("#menu");
+const fragment = document.createDocumentFragment();
+
+const pizzas = ["Margherita - $14", "BBQ Chicken - $16", "Veggie - 13"];
+
+pizzas.forEach(function(pizza) {
+
+  const li = document.createElement("li");
+
+  li.textContent = pizza;
+  li.classList.add("pizza-item");
+
+  fragment.appendChild(li);
+
+  }
+
+);
+
+menu.appendChild(fragment);
