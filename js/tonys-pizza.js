@@ -524,4 +524,32 @@ for (let i = 1; i <= 10; i++) {
 
 // While Loops
 
+/*
+Tony's Pizza Shop — the oven:
+Tony's oven can only hold 3 pizzas at a time. He has 10 pizzas to bake.
+Keep baking until all pizzas are done.
+*/
+
+// let pizzasToBake = 10;
+// let ovenCapacity = 3;
+// let batch = 1;
+
+// while (pizzasToBake > 0) {
+
+//   let baking = Math.min(ovenCapacity, pizzasToBake);
+//   pizzasToBake -= baking;
+//   console.log("Batch #" + batch + ": Baking " + baking + " pizzas. Remaining: " + pizzasToBake);
+
+//   batch++;
+
+// }
+
+// console.log("All pizzas done!");
+
+
+/* JAVASCRIPT TRAINING — PAUSED
+
+The code directly above the heading comment is where I left of in JavaScript
+*/
+
 
