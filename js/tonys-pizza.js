@@ -841,14 +841,92 @@ how you'd highlight featured items, sold-out items, or promotional pricing.
 
 // Prevent Default
 
+// const orderForm = document.querySelector("#order-form");
+
+// orderForm.addEventListener("submit", function(event) {
+
+//   event.preventDefault();
+//   const customerName = document.querySelector("#customer-name").value;
+//   console.log("Order submitted for: " + customerName);
+
+//   }
+
+// );
+
+// TOPIC - FORM VALIDATION
+
+// const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// console.log(emailPattern.test("sam@gmail.com"));  // true
+// console.log(emailPattern.test("notanemail"));
+
+// Custom JavaScript Form Validation
+
+// const orderForm = document.querySelector("#order-form");
+
+// orderForm.addEventListener("submit", function(event) {
+
+//   event.preventDefault();
+
+//   const customerName = document.querySelector("#customer-name").value;
+//   const customerEmail = document.querySelector("#customer-email").value;
+//   const orderTotal = document.querySelector("#order-total").value;
+//   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+//   if (customerName === "") {
+
+//     console.log("Error: Name is required");
+
+//   } else if (!emailPattern.test(customerEmail)) {
+
+//     console.log("Error: Invalid email format");
+
+//   } else if (orderTotal < 10) {
+
+//     console.log("Error: Minimum order is $10");
+
+//   } else {
+
+//     console.log("Order confirmed for: " + customerName);
+
+//   }
+
+// });
+
+// Displaying Errors On The Page
+
 const orderForm = document.querySelector("#order-form");
+const formMessage = document.querySelector("#form-message");
 
 orderForm.addEventListener("submit", function(event) {
 
   event.preventDefault();
+
   const customerName = document.querySelector("#customer-name").value;
-  console.log("Order submitted for: " + customerName);
+  const customerEmail = document.querySelector("#customer-email").value;
+  const orderTotal = document.querySelector("#order-total").value;
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (customerName === "") {
+
+    formMessage.textContent = "Error: Name is required";
+    formMessage.style.color = "red";
+
+  } else if (!emailPattern.test(customerEmail)) {
+
+    formMessage.textContent = "Error: Invalid email format";
+    formMessage.style.color = "red";
+
+  } else if (orderTotal < 10) {
+
+    formMessage.textContent = "Error: Minimum order is $10";
+    formMessage.style.color = "red";
+
+  } else {
+
+    formMessage.textContent = "Order confirmed for: " + customerName + "!";
+    formMessage.style.color = "green";
 
   }
-
-);
+  
+});
