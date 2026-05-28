@@ -13,13 +13,32 @@
     <h1 id="shop-title">Tony's Pizza Shop</h1>
     <p id="tagline">The best pizza in NYC</p>
 
-    <ul id="menu">
+    <!-- <ul id="menu">
       <li class="pizza-item" data-price="12">Cheese - $12</li>
       <li class="pizza-item" data-price="18">Supreme - $18</li>
       <li class="pizza-item" data-price="20">Sicilian - $20</li>
-    </ul>
+    </ul> -->
 
-    <button id="order-btn">Place Order</button>
+    <div id="menu-container">
+
+        <ul id="menu">
+
+            <li class="pizza-item" data-price="12">Cheese - $12</li>
+            <li class="pizza-item" data-price="18">Supreme - $18</li>
+            <li class="pizza-item" data-price="20">Sicilian - $20</li>
+
+        </ul>
+
+    </div>
+
+    <form id="order-form">
+
+        <input type="text" id="customer-name" placeholder="Your name">
+        <button type="submit">Submit Order</button>
+
+    </form>
+
+    <!-- <button id="order-btn">Place Order</button> -->
 
     <!-- <img id="pizza-img" src="pizza.jpg" alt="Cheese Pizza"> -->
 

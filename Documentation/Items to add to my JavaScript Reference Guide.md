@@ -38,3 +38,13 @@ window.innerWidth	The browser viewport — the visible page area
 
 screen.width			The physical monitor resolution
 
+* Best practices for writing and testing alerts, prompts, etc
+
+The rule:
+
+Situation										Where to write it
+
+Code that fires immediately on load				Be careful — dialogs will block the page
+
+Code that fires on a user action					Safe in VS Code — it waits for the trigger
+

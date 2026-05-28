@@ -695,3 +695,160 @@ how you'd highlight featured items, sold-out items, or promotional pricing.
   
 // }
 
+// TOPIC - EVENT HANDLING
+
+// Event Listening
+// const orderBtn = document.querySelector("#order-btn");
+
+// orderBtn.addEventListener("click", function() {
+
+//   alert("Order placed at Tony's!");
+
+//   }
+
+// );
+
+// const orderBtn = document.querySelector("#order-btn");
+
+// orderBtn.addEventListener("click", function() {
+
+//   const tagline = document.querySelector("#tagline");
+//   tagline.textContent = "Your order has been placed!";
+//   tagline.style.color = "green";
+
+//   }
+
+// );
+
+// Event Objects
+
+// const orderBtn = document.querySelector("#order-btn");
+
+// orderBtn.addEventListener("click", function(event) {
+
+//   console.log(event);
+//   console.log(event.type);
+//   console.log(event.target);
+
+//   }
+
+// );
+
+
+// const orderBtn = document.querySelector("#order-btn");
+
+// orderBtn.addEventListener("click", function(event) {
+
+//   event.target.textContent = "Order Placed!";
+//   event.target.style.backgroundColor = "green";
+
+//   }
+
+// );
+
+// Event Target With Multiple Elements
+
+// const pizzaItems = document.querySelectorAll(".pizza-item");
+
+// pizzaItems.forEach(function(item) {
+
+//   item.addEventListener("click", function(event) {
+
+//     console.log("You selected: " + event.target.textContent);
+
+//       }
+
+//     )
+
+//   }
+
+// );
+
+// Event Bubbling
+
+// document.querySelector("#menu-container").addEventListener("click", function(event) {
+
+//   console.log("Container clicked");
+
+//   }
+
+// );
+
+// document.querySelector("#menu").addEventListener("click", function(event) {
+
+//   console.log("Menu clicked");
+
+//   }
+
+// );
+
+// document.querySelector(".pizza-item").addEventListener("click", function(event) {
+
+//   console.log("Pizza item clicked");
+
+//   }
+
+// );
+
+// Event Delegation
+
+// document.querySelector("#menu").addEventListener("click", function(event) {
+
+//   if (event.target.classList.contains("pizza-item")) {
+
+//     console.log("You selected: " + event.target.textContent);
+
+//     }
+  
+//   }
+
+// );
+
+// Stop Propagation
+
+// document.querySelector("#menu").addEventListener("click", function(event) {
+
+//   console.log("Menu clicked");
+
+//   }
+
+// );
+
+// document.querySelector("#menu-container").addEventListener("click", function(event) {
+
+//   console.log("Container clicked");
+
+//   }
+
+// );
+
+//   const pizzaItems = document.querySelectorAll(".pizza-item");
+
+//   pizzaItems.forEach(function(item) {
+
+//     item.addEventListener("click", function(event) {
+
+//       event.stopPropagation();
+//       console.log("Pizza item clicked - stopped here!");
+
+//       }
+
+//     );
+
+//   }
+
+// );
+
+// Prevent Default
+
+const orderForm = document.querySelector("#order-form");
+
+orderForm.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+  const customerName = document.querySelector("#customer-name").value;
+  console.log("Order submitted for: " + customerName);
+
+  }
+
+);
