@@ -20,5 +20,21 @@ removeAttribute("alt")				Removes the attribute entirely
 
 data-price is called a data attribute — a special HTML feature that lets you store custom data directly on an element. The naming convention is always data- followed by your chosen name. It's not just for JavaScript to select — it's for storing extra information on an element that doesn't affect how it looks but JavaScript can read it. You'll use data attributes constantly in real projects.
 
-* 
+* DOM vs BOM distinctions
+
+DOM											BOM
+
+What it controls: The page content				The browser itself
+
+Top level object: document						window
+
+Examples: querySelector, createElement			location, history, navigator
+
+* Window vs screen — important distinction:
+
+What it measures
+
+window.innerWidth	The browser viewport — the visible page area
+
+screen.width			The physical monitor resolution
 

@@ -578,14 +578,14 @@ shopTitle.textContent = "Tony's Famous Pizza Shop";
 // // shopTitle.style.color = "red";
 // // shopTitle.style.fontSize = "48px";
 
-const shopTitle = document.querySelector("#shop-title");
-shopTitle.classList.add("featured");
-shopTitle.classList.remove("featured");
-shopTitle.classList.toggle("featured");
-shopTitle.classList.toggle("featured");
-shopTitle.classList.toggle("featured");
+// const shopTitle = document.querySelector("#shop-title");
+// shopTitle.classList.add("featured");
+// shopTitle.classList.remove("featured");
+// shopTitle.classList.toggle("featured");
+// shopTitle.classList.toggle("featured");
+// shopTitle.classList.toggle("featured");
 
-console.log(shopTitle.classList.contains("featured"));
+// console.log(shopTitle.classList.contains("featured"));
 
 // Manipulating Attributes
 
@@ -598,21 +598,21 @@ console.log(shopTitle.classList.contains("featured"));
 // Iterating Over a Collection
 // Tony wants to highlight any pizza over $15 on the menu.
 
-const pizzaItems = document.querySelectorAll(".pizza-item");
+// const pizzaItems = document.querySelectorAll(".pizza-item");
 
-pizzaItems.forEach(function(item) {
+// pizzaItems.forEach(function(item) {
 
-  const price = parseInt(item.getAttribute("data-price"));
+//   const price = parseInt(item.getAttribute("data-price"));
 
-  if (price > 15) {
+//   if (price > 15) {
 
-    item.style.color = "red";
+//     item.style.color = "red";
 
-    }
+//     }
 
-  }
+//   }
 
-);
+// );
 
 /* ^^^^^^^^^^^^^^ Start of the DOM exercises to here - What you just built is real DOM manipulation:
 
@@ -629,22 +629,69 @@ how you'd highlight featured items, sold-out items, or promotional pricing.
 
 // Building a menu dynamically:
 
-const menu = document.querySelector("#menu");
-const fragment = document.createDocumentFragment();
+// const menu = document.querySelector("#menu");
+// const fragment = document.createDocumentFragment();
 
-const pizzas = ["Margherita - $14", "BBQ Chicken - $16", "Veggie - 13"];
+// const pizzas = ["Margherita - $14", "BBQ Chicken - $16", "Veggie - 13"];
 
-pizzas.forEach(function(pizza) {
+// pizzas.forEach(function(pizza) {
 
-  const li = document.createElement("li");
+//   const li = document.createElement("li");
 
-  li.textContent = pizza;
-  li.classList.add("pizza-item");
+//   li.textContent = pizza;
+//   li.classList.add("pizza-item");
 
-  fragment.appendChild(li);
+//   fragment.appendChild(li);
 
-  }
+//   }
 
-);
+// );
 
-menu.appendChild(fragment);
+// menu.appendChild(fragment);
+
+// TOPIC - BROWSER OBJECT MODEL
+
+// The window object
+
+// console.log(window.innerWidth);
+// console.log(window.innerHeight);
+
+// The location object
+
+// console.log(window.location.href);
+// console.log(window.location.hostname);
+// console.log(window.location.pathname);
+
+// The History Object
+
+// console.log(window.history.length);
+
+// The Navigator Object
+
+// console.log(window.navigator.userAgent);
+// console.log(window.navigator.language);
+// console.log(window.navigator.onLine);
+
+// The Screen Object
+
+// console.log(screen.width);
+// console.log(screen.height);
+// console.log(screen.availWidth);
+// console.log(screen.availHeight);
+// console.log(screen.colorDepth);
+
+// Global Functions and Objects
+
+// console.log(window.parseInt("42"));
+// console.log(window.parseFloat("3.14"));
+// console.log(window.isNaN("hello"));
+// console.log(window.Math.max(5, 10, 3));
+
+// const orderTotal = "hello";
+
+// if ( isNaN(orderTotal)) {
+
+//   console.log("Invalid order total - must be a number")
+  
+// }
+
